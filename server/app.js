@@ -397,7 +397,8 @@ app.get('/account', asyncHandler(async (req, res, next)=>{
 	return next();
 }));
 
-
+const acc = config.get('acc');
+const acc_pass = config.get('pass');
 const nodeEnv = config.get('node_env');
 const isLocalEnvironment = config.get('local_environments').includes(nodeEnv);
 // Local only
@@ -405,7 +406,8 @@ if(isLocalEnvironment){
 	// Login
 	app.post('/local/login', (req, res)=>{
 		const username = req.body.username;
-		if(!username) return;
+		const password = req.body.password;
+		if(!username || acc !== username || password !== acc_pass) return;
 
 		const payload = jwt.encode({ username: username, issued: new Date }, config.get('secret'));
 		return res.json(payload);

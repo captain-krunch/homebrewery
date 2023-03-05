@@ -40,12 +40,13 @@ const Account = createClass({
 	localLogin : async function(){
 		const username = prompt('Enter username:');
 		if(!username) {return;}
+		const password = prompt('Enter password:')
 
 		const expiry = new Date;
 		expiry.setFullYear(expiry.getFullYear() + 1);
 
 		const token = await request.post('/local/login')
-				.send({ username })
+				.send({ username, password })
 				.then((response)=>{
 					return response.body;
 				})
