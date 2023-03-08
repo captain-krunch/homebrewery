@@ -58,7 +58,7 @@ const ErrorNavItem = createClass({
 					and sign back in with Google,
 					then try saving again!
 					<a target='_blank' rel='noopener noreferrer'
-						href={`https://www.naturalcrit.com/login?redirect=${window.location.href}`}>
+						href={`https://hbl.onrender.com/login?redirect=${window.location.href}`}>
 						<div className='confirm'>
 							Sign In
 						</div>

@@ -248,7 +248,7 @@ const EditPage = createClass({
 					You must be signed in to a Google account to transfer
 					between the homebrewery and Google Drive!
 					<a target='_blank' rel='noopener noreferrer'
-						href={`https://www.naturalcrit.com/login?redirect=${this.state.url}`}>
+						href={`https://hbl.onrender.com/login?redirect=${this.state.url}`}>
 						<div className='confirm'>
 							Sign In
 						</div>

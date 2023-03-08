@@ -106,7 +106,7 @@ const Account = createClass({
 
 		// Logged out
 		// Production site
-		return <Nav.item href={`https://www.naturalcrit.com/login?redirect=${this.state.url}`} color='teal' icon='fas fa-sign-in-alt'>
+		return <Nav.item href={`https://hbl.onrender.com/login?redirect=${this.state.url}`} color='teal' icon='fas fa-sign-in-alt'>
 			login
 		</Nav.item>;
 	}
